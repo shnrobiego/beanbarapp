@@ -20,6 +20,7 @@ class Admin
 
         if(Auth::user()->usertype!='admin')
         {
+            // Redirect or return unauthorized response
             return redirect('dashboard');
         }
 

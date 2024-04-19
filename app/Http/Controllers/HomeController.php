@@ -10,10 +10,32 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function dashboard()
     {
-
+        // Logic for dashboard management
         return view('admin.dashboard');
     }
+    public function cashier()
+    {
+        // Logic for cashier management
+        return view('admin.cashier');
+    }
 
+    public function product()
+    {
+        // Logic for product management
+        return view('admin.product');
+    }
+
+    public function sales()
+    {
+        // Logic for sales report
+        return view('admin.sales');
+    }
+
+    public function settings()
+    {
+        // Logic for settings
+        return view('admin.settings');
+    }
 }
