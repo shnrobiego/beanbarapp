@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
-//use App\Http\Middleware\Admin;
+use App\Http\Controllers\ProductController;
 
 
 Route::get('/', function () {
@@ -32,4 +32,11 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/product', [HomeController::class, 'product'])->name('admin.product');
     Route::get('admin/sales', [HomeController::class, 'sales'])->name('admin.sales');
     Route::get('admin/settings', [HomeController::class, 'settings'])->name('admin.settings');
+
+    // Routes for managing products 
+    Route::get('admin/product', [ProductController::class, 'index'])->name('admin.product.index');
+    Route::post('admin/product', [ProductController::class, 'store'])->name('admin.product.store');
+    Route::get('admin/product/{product}/edit', [ProductController::class, 'edit'])->name('admin.product.edit');
+    Route::put('admin/product/{product}', [ProductController::class, 'update'])->name('admin.product.update');
+    Route::delete('admin/product/{product}', [ProductController::class, 'destroy'])->name('admin.product.destroy');
 });
