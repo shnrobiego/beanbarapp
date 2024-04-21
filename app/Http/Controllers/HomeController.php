@@ -23,8 +23,11 @@ class HomeController extends Controller
 
     public function product()
     {
+        $data = array(
+            'title' => 'Products'
+        );
         // Logic for product management
-        return view('admin.product');
+        return view('admin.product')->with($data);
     }
 
     public function sales()
