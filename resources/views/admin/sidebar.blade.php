@@ -1,26 +1,22 @@
 <style>
+    /* Sidebar styles with height set */
     aside {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
         width: 250px;
+        
         background-color: #263544;
         color: #fff;
         padding: 20px;
-        }
-
-    .relative.min-h-screen.md:flex {
-        display: flex;
         min-height: 100vh;
     }
 
-    .flex-1 {
+    /* Navigation styles */
+    .navigation {
         flex: 1;
     }
 </style>
 
-<aside class="z-10 bg-blue-800 text-blue-100 w-64 px-2 py-4  inset-y-0 left-0 md:relative transform- md:translate-x-0 overflow-y-auto transition ease-in-out duration-200 shadow-lg">
+<div class="container flex">
+    <aside class="z-10 bg-blue-800 text-blue-100 w-64 px-2 py-4  inset-y-0 left-0 md:relative transform- md:translate-x-0 overflow-y-auto transition ease-in-out duration-200 shadow-lg">
     <!--sidebar menu-->     
     <ul class="text-sm">
         <li class="px-4 py-2 hover:bg-gray-700">
@@ -40,3 +36,4 @@
         </li>
     </ul>
 </aside>
+</div>

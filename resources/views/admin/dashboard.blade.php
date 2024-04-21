@@ -5,17 +5,26 @@
         </h2>
     </x-slot>
 
-    <div class="relative min-h-screen md:flex">
-        <!-- Include the sidebar -->
-        @include('admin.sidebar')
+    <div class="container-fluid">
+        <div class="flex">
+            <!-- Sidebar -->
+            <div class="col-lg-2">
+                <div class="relative min-h-screen md:flex md:flex-col">
+                    <!-- Include the sidebar -->
+                    @include('admin.sidebar')
+                </div>
+            </div>
 
-        <!-- Main content -->
-        <div class="flex-1 p-4">
-            <!-- Your dashboard content goes here -->
-            <div class="bg-white p-4 rounded-md shadow-md">
-                <h1 class="text-xl font-bold mb-4">Dashboard</h1>
-                <!-- Add your dashboard content here -->
-                <p>content</p>
+            <!-- Main Content -->
+            <div class="col-lg-10">
+                <div class="p-4">
+                    <!-- Main content -->
+                    <div class="bg-white p-4 rounded-md shadow-md">
+                        <h1 class="text-xl font-bold mb-4">Dashboard</h1>
+                        <!-- Add your dashboard content here -->
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque repellendus tenetur quibusdam voluptas, iusto reprehenderit architecto totam minus debitis, omnis iste est porro consectetur! Unde officiis repellat nesciunt enim animi consequuntur et sit quidem corrupti minima eius ipsa, repudiandae nisi, in dignissimos. Dicta voluptates tempora perspiciatis cumque laboriosam quos voluptatibus.
+                    </div>
+                </div>
             </div>
         </div>
     </div>
